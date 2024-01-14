@@ -1,0 +1,17 @@
+python run.py \
+--data_dir data \
+--output_dir output \
+--encoder roberta-base \
+--decoder facebook/bart-base \
+--do_train \
+--tasks para add diff extcomp \
+--pooler_type cls \
+--n_gpus 4 \
+--batch_size_per_gpu 64 \
+--learning_rate 5e-6 \
+--fast_learning_rate 1e-4 \
+--max_epochs 5 \
+--val_per_epoch 5 \
+--max_length 64 \
+--cl_loss_weight 1.0 \
+--gen_loss_weight 1e-2 \
